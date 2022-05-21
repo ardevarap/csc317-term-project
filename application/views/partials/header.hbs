@@ -1,0 +1,13 @@
+<div id= "banner">Nature Photos</div>
+<nav id="nav-bar">
+    <a href="/" id="home-button" class="nav-bar-buttons">Home</a>
+    <input id="search-text" name="search-text" type="text">
+    <i id="search-button" class="fas fa-search nav-items">Search!</i>
+    <a href="/postimage" id="post-button" class="nav-bar-buttons">Post</a>
+
+    {{#if logged}}
+    <a href="/logout" id="logout-button" class="nav-bar-buttons">Log Out</a>
+    {{else }}
+    <a href="/login" id="login-button" class="nav-bar-buttons">Log In</a>
+    {{/if}}
+</nav>

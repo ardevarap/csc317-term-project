@@ -1,0 +1,288 @@
+#banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color:rgb(4, 6, 4); 
+    color:rgb(178, 227, 178);
+    border: 2px;
+    font-size: 40px;
+    font-style: italic;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    box-shadow: 1px 2px 2px;
+    text-align: center;
+}
+
+ #nav-bar {
+    position: fixed;
+    top: 83px;
+    left: 0;
+    right: 0;
+    background-color: rgb(17, 37, 17);
+    padding-top: 0.75%;
+    padding-bottom: 0.75%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    text-align: center;
+}
+
+.nav-bar-buttons {
+    border-radius: 0.25rem;
+    border: 1px solid beige;
+    padding: 14px;
+}
+
+#search-button {
+    margin-left: -0.45%;
+    color: beige;
+    background-color: rgb(4, 6, 4); ;
+    border-radius: 0.25rem;
+    border: 1px solid beige;
+    padding: 14px;
+}
+
+body {
+    background-image: url("/public/css/backgroundpic.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#container {
+    display: grid;
+    grid-area: content;
+    padding-top: 11%;
+    padding-bottom: 3%;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-columns: repeat(4, 1fr);
+    grid-auto-rows: 1fr;
+    gap: .25em;
+    width: 100%;
+    text-align: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    border: 0.0625rem solid 1fr 1fr;
+    border-radius: 0.25rem;
+    border: 2px solid rgb(17, 37, 17);
+    box-shadow: 0px 2px 2px rgb(140, 140, 125);
+}
+
+.card-image {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+div[class=card]>img {
+    height: 200px;
+    width: 100%;
+}
+
+.card-title {
+    color: beige;
+    font: 1.5em sans-serif;
+    margin-bottom: .1rem;
+    margin-top: 0;
+    padding-top: .1rem;
+}
+
+.card-body {
+    grid-area: 2 / 1 / 3 / 2;
+    padding: 0.75rem;
+    background-color: rgba(4, 6, 4, 0.7);
+    border-radius: 0 0 .2rem .2rem;
+    height: 100%;
+}
+
+div[class=card-body]>a[class=card-button] {
+    text-decoration: none;
+}
+
+.card-text {
+    color: beige;
+    font: 1em sans-serif;
+}
+
+form {
+    position: fixed;
+    top: 120px;
+    border: 3px solid rgb(17, 37, 17);
+    background-color: rgba(4, 6, 4, 0.7);
+    padding: 1.5em;
+    margin: 5% 30% 20% 30%;
+    box-shadow: 0px 2px 2px rgb(140, 140, 125);
+}
+
+label {
+    color: beige;
+    font: 1em sans-serif;
+}
+
+legend {
+    color: beige;
+    font: 2em sans-serif;
+    text-align: center;
+}
+
+a {
+    color:beige;
+    font: 1em sans-serif;
+}
+
+button {
+    border-radius: 25px;
+    border: 1px solid rgb(37, 63, 51);
+    background-color: rgb(37, 63, 51);
+    color: beige;
+    display: inline-block;
+    padding: 10px 250px;
+}
+
+input {
+    border-radius: 5px;
+    border: 1px solid rgba(240, 255, 250, 0.7);
+    padding: 1% 33%;
+    background-color: rgba(37, 63, 51, 0.7);
+    color: rgb(240, 255, 250);
+}
+
+input[type=file] {
+    border-radius: 5px;
+    border: 1px solid rgba(240, 255, 250, 0.7);
+    padding: 1% 22%;
+    background-color: rgba(37, 63, 51, 0.7);
+    color: beige;
+}
+
+#post-container {
+    margin-top: 10%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+}
+
+#postview {
+    border-radius: 0px;
+    border: 3px solid rgb(17, 37, 17);
+    background-color: rgba(4, 6, 4, 0.7);
+    padding: 1% 1%;
+    box-shadow: 0px 2px 2px rgb(140, 140, 125);
+    text-align: center;
+}
+
+#image-post-image {
+    height: 500px;
+    width: 500px;
+}
+
+#comment-section {
+    display: grid;
+    justify-self: center;
+    grid-area: commments;
+    grid-template-rows: auto 75px;
+    grid-template-columns: 1fr;
+    gap: .2rem;
+    grid-template-areas: "messages" "comment-box";
+    max-height: 80vh;
+    border: 3px solid rgb(17, 37, 17);
+    background-color: rgba(4, 6, 4, 0.7);
+    padding: 1% 1%;
+    padding-right: 17.75%;
+    box-shadow: 0px 3px 3px rgb(140, 140, 125);
+}
+
+#messages {
+    grid-area: messages;
+    overflow-y: auto;
+    display: flex;
+    flex-flow: column-reverse nowrap;
+    scroll-behavior: smooth;
+    border: 1px solid beige;
+    box-shadow: 1px 1px rgb(140, 140, 125);
+    border-radius: 0.35rem;
+    width: 120%;
+}
+
+div[id^=message-] {
+    display: flex;
+    flex-direction: column;
+    gap: .2em;
+    padding: .25rem;
+    margin: .2rem;
+    font-size: 1rem;
+}
+
+.author-text {
+    justify-self: start;
+    color: lightgreen;
+}
+
+.comment-text {
+    overflow: hidden;
+    color:beige;
+    max-height: 60px;
+    max-width: 60%;
+    justify-self: start;
+}
+
+.date-posted {
+justify-self: end;
+color: lightblue;
+}
+
+#comment-box-text {
+    margin-top: 10px;
+    width: 60%;
+}
+
+#comment-box-button {
+    position: relative;
+    top: -13px;
+    background-color: rgb(17, 37, 17);
+    color:beige;
+    border-radius: 0.25rem;
+    border: 1px solid beige;
+    padding: 8px;
+}
+
+h2 {
+    color: beige;
+    font: 1.25em sans-serif;
+    text-align: left;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+p {
+    color: beige;
+    font: 1em sans-serif;
+    text-align: left;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+#footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color:rgb(4, 6, 4); 
+    color:rgb(178, 227, 178);
+    border: 2px;
+    font-size: 12px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    box-shadow: 1px 2px 2px;
+    text-align: center;
+}

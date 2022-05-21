@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/form.css">
+    <script defer src="../js/registration.js"></script>
+    <title>Registration</title>
+</head>
+<body>
+    <header>
+        <h1>Register New Account</h1>
+    </header>
+    <form id="form" onsubmit="validation()">
+        <fieldset>
+            <legend>Enter your information</legend>
+            <br />
+            <label>Create a username:</label>
+            <input type="text" id="username" name="username" required>
+            <br />
+            <label>Enter your email:</label>
+            <input type="email" id="email" name="email" required>
+            <br />
+            <label>Create a password:</label>
+            <input type="password" id="password" name="password" required>
+            <br />
+            <label>Confirm password:</label>
+            <input type="password" id="c_password" name="c_password" required>
+            <br />
+            <label>
+                Confirm that you are above 13 years of age
+            </label>
+            <input type="checkbox" id="13+" required>
+            <br />
+            <label>
+                Confirm that you accept the <a href="#">TOS</a> 
+                and the <a href="#">Privacy Policy</a>
+            </label>
+            <input type="checkbox" id="accept" required>
+            <br />
+            <br />
+            <label>
+                 <a href="#">Login</a> to an existing account
+            </label>
+            <br />
+            <br />
+        </fieldset>
+        <br />
+        <button type="submit" id="button">Create</button>
+    </form>  
+</body>
+</html>

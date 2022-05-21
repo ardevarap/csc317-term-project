@@ -1,0 +1,30 @@
+<style>
+.alert-success {
+    position: fixed;
+    left: 50%;
+    top: 18%;
+    transform: translate(-50%, 0);
+    color: lightgreen;
+    background-color: rgba(2, 60, 4, 0.8);
+    padding: 1%;
+    text-align: center;
+}
+.alert-danger {
+    position: absolute;
+    left: 50%;
+    top: 18%;
+    transform: translate(-50%, 0);
+    color: rgb(238, 144, 144);
+    background-color: rgba(60, 2, 2, 0.8);
+    padding: 1%;
+    text-align: center;
+}
+</style>
+
+<div id="flash-message">
+    {{#if messages.error}}
+    <div class="alert-danger">{{messages.error}}</div>
+    {{else}}
+    <div class="alert-success">{{messages.success}}</div>
+    {{/if}}
+</div>
